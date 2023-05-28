@@ -49,3 +49,9 @@
     </Routes>
   ```
 
+## Fetching data
+- for mocking server in local computer, ensure `json-server` package is installed globally
+- else run `npm i -g json-server`
+- run `json-server -w -p 4000 ./data/db.json`
+- for ease of use, we will be using Fake Store Api `https://fakestoreapi.com/products`
+

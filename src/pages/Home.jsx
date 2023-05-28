@@ -1,6 +1,14 @@
+import { createResource } from "solid-js";
 import Card from "../components/Card";
 
+const fetchProducts = async () => {
+  const res = await fetch('https://fakestoreapi.com/products')
+  return res.json()
+}
+
 function Home() {
+  const [products] = createResource(fetchProducts);
+
   return (
     <div class="grid grid-cols-4 gap-10 my-4">
       <Card rounded={true} flat={false}>
@@ -20,6 +28,8 @@ function Home() {
         </p>
         <p>Only $10</p>
       </Card>
+
+      <p>{ console.log(products(), products.loading) }</p>
     </div>
   );
 }
