@@ -12,9 +12,9 @@ function App() {
       <img class='rouned-md' src={banner} alt="site banner" />
 
       <div class='grid grid-cols-4 gap-10 my-4'>
-        <Card />
-        <Card />
-        <Card />
+        {/* <Card title='ninja tee' /> */}
+        <Card title='ninja tote bag' rounded={true} flat={false} />
+        <Card title='ninja hoodie' rounded={false} flat={true} />
       </div>
     </div>
   );
