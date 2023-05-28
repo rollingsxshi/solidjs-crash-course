@@ -6,3 +6,10 @@
 - `pnpm i` to install dependencies
 - `pnpm run dev` to run the project
 - `src/App.jsx` is the root component of our app
+
+## Components
+- create `components` folder
+- similar to React components
+
+## Global styles & Tailwind
+- 
