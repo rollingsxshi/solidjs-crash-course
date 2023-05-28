@@ -1,18 +1,21 @@
+import styles from './App.module.css';
 import banner from './assets/banner.png'
 import Card from './components/Card';
 
 function App() {
   return (
-    <div>
+    <div class='container m-auto'>
       <header>
         <h1>Ninja Merch</h1>
       </header>
 
-      <img src={banner} alt="site banner" />
+      <img class='rouned-md' src={banner} alt="site banner" />
 
-      <Card />
-      <Card />
-      <Card />
+      <div class='grid grid-cols-4 gap-10 my-4'>
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }

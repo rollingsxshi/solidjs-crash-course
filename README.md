@@ -12,4 +12,4 @@
 - similar to React components
 
 ## Global styles & Tailwind
-- 
+- `pnpm add -D tailwindcss postcss autoprefixer` and `npx tailwindcss init -p`
