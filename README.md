@@ -38,3 +38,14 @@
 - `onClick={() => }` for buttons
 - `type='text' onInput={ (e) => setName(e.target.value) value={name()} }` for inputs, `value` is optional and for 2-way binding
 
+## Solid Router
+- separate package, run `pnpm i @solidjs/router`
+- wrap `<App />` component with `<Router></Router>` in index.jsx
+- In `App.jsx`:
+  ```js
+    <Routes>
+      <Route path="/" component={Home} />
+      <Route path="/cart" component={Cart} />
+    </Routes>
+  ```
+
