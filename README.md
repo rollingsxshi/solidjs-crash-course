@@ -63,3 +63,30 @@
     const [product] = createResource(params.id, fetchProduct) // pass id to fetchProduct()
   ```
 
+## Using Stores for state management
+- createStore()
+- when used in component, not invoked
+  ```js
+    const [products, setProducts] = createStore([ // array of objects
+      { tittle: 'ninja tee', price: 10, id: 1 },
+      { tittle: 'ninja hoodie', price: 20, id: 2 },
+    ])
+
+    function changeProduct(id) {
+      // setProducts(0, 'price', 25)
+      setProducts((p) => p.id === id, 'price', 50)
+    }
+
+    return (
+      <div>
+        <For each={products}>
+          {(p) => (
+            <p>{p.title} - ${p.price}</p>
+          )}
+        </For>
+
+        <button onClick={() => changeProduct(2)}>change a product</button>
+      </div>
+    )
+  ```
+
