@@ -93,3 +93,8 @@
 ## Effects (similar to useEffect)
 - `createEffect()`
 - fire a function each time dependency (state) changes
+
+## Context
+- global states
+- `createContext()` in file in context folder
+- `useContext()` in component that uses the state
