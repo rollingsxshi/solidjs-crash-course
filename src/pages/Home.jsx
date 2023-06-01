@@ -1,5 +1,6 @@
 import { For, Show, createResource } from "solid-js";
 import Card from "../components/Card";
+import { A } from "@solidjs/router";
 
 const fetchProducts = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -17,6 +18,7 @@ function Home() {
             <Card rounded={true} flat={true}>
               <img src={ product.image } alt="product img" />
               <h2 class="my-3 font-bold">{ product.title }</h2>
+              <A href={`/product/${product.id}`} class="btn">View Product</A>
             </Card>
           )}
         </For>

@@ -55,3 +55,11 @@
 - run `json-server -w -p 4000 ./data/db.json`
 - for ease of use, we will be using Fake Store Api `https://fakestoreapi.com/products`
 
+## Route params
+- In route, `path="/product/:id"`
+- useParams() in Component to extract route parameter
+  ```js
+    const params = useParams()
+    const [product] = createResource(params.id, fetchProduct) // pass id to fetchProduct()
+  ```
+
