@@ -98,3 +98,17 @@
 - global states
 - `createContext()` in file in context folder
 - `useContext()` in component that uses the state
+
+## Derived values
+- derived from a signal value
+  ```js
+    const [count, setCount] = createSignal(1)
+
+    const double = () => {
+      return count() * 2
+    }
+
+    return (
+      <p>{ double() }</p>
+    )
+  ```
