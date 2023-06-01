@@ -65,7 +65,7 @@
 
 ## Using Stores for state management
 - createStore()
-- when used in component, not invoked
+- when used in component, state not invoked (without braces)
   ```js
     const [products, setProducts] = createStore([ // array of objects
       { tittle: 'ninja tee', price: 10, id: 1 },
@@ -90,3 +90,6 @@
     )
   ```
 
+## Effects (similar to useEffect)
+- `createEffect()`
+- fire a function each time dependency (state) changes
